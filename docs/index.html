@@ -7,23 +7,23 @@
 
   <style>
     :root {
-      --bg: #0e1117;
-      --card: #141922;
-      --text: #f2f4f8;
-      --muted: #b0b6c3;
-      --subtle: #8a90a2;
+      --bg: #0b0f14;
+      --card: #121822;
+      --text: #f3f5f9;
+      --muted: #b2b8c6;
+      --subtle: #8b91a2;
       --border: rgba(255,255,255,0.12);
       --accent: #4da3ff;
       --accent2: #7bd389;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--bg);
+      background: radial-gradient(1200px 500px at 20% -10%, #141b26, transparent),
+                  radial-gradient(800px 400px at 90% 10%, #101826, transparent),
+                  var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                    Roboto, Inter, Helvetica, Arial, sans-serif;
@@ -35,12 +35,11 @@
       font-weight: 600;
     }
 
-    h1 { font-size: 22px; }
+    h1 { font-size: 24px; }
     h2 { font-size: 18px; margin-top: 22px; }
     h3 { font-size: 15px; margin-top: 14px; }
 
     p { margin: 8px 0; color: var(--muted); }
-
     strong { color: var(--text); }
 
     a {
@@ -48,22 +47,19 @@
       text-decoration: none;
       border-bottom: 1px dashed rgba(255,255,255,0.25);
     }
-
-    a:hover {
-      border-bottom-color: var(--accent);
-    }
+    a:hover { border-bottom-color: var(--accent); }
 
     .wrap {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 20px 16px 40px;
+      padding: 24px 16px 48px;
     }
 
     header {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .brand {
@@ -76,16 +72,16 @@
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #4da3ff, #7bd389);
+      background: linear-gradient(135deg, #5bc0ff, #6fe1a1);
       display: grid;
       place-items: center;
       font-weight: 700;
-      color: #000;
+      color: #081015;
     }
 
     .subtitle {
       color: var(--subtle);
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .meta {
@@ -116,20 +112,19 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 22px;
     }
 
     @media (min-width: 900px) {
-      .grid {
-        grid-template-columns: 2.2fr 1fr;
-      }
+      .grid { grid-template-columns: 2.3fr 1fr; }
     }
 
     .card {
-      background: var(--card);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 18px;
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
 
     ul {
@@ -137,13 +132,12 @@
       margin: 10px 0;
       color: var(--muted);
     }
-
     li { margin: 6px 0; }
 
     .divider {
       height: 1px;
       background: var(--border);
-      margin: 18px 0;
+      margin: 20px 0;
     }
 
     .callout {
@@ -174,7 +168,7 @@
     .note {
       border-left: 3px solid var(--accent);
       padding: 10px 12px;
-      background: rgba(77,163,255,0.06);
+      background: rgba(77,163,255,0.08);
       border-radius: 10px;
       margin: 12px 0;
       color: var(--muted);
@@ -186,9 +180,7 @@
     }
 
     @media (min-width: 700px) {
-      .kpi {
-        grid-template-columns: 1fr 1fr;
-      }
+      .kpi { grid-template-columns: 1fr 1fr; }
     }
 
     .tile {
@@ -236,7 +228,6 @@
       height: 10px;
       border-radius: 50%;
     }
-
     .b1 { background: var(--accent); }
     .b2 { background: var(--accent2); }
 
@@ -246,7 +237,7 @@
     }
 
     footer {
-      margin-top: 22px;
+      margin-top: 28px;
       text-align: center;
       font-size: 12px;
       color: var(--subtle);
@@ -257,7 +248,7 @@
 <body>
   <div class="wrap">
 
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
       <div class="brand">
         <div class="logo">FS</div>
@@ -277,18 +268,174 @@
       </div>
     </header>
 
-    <!-- Content -->
+    <!-- CONTENT -->
     <div class="grid">
 
-      <!-- Main -->
+      <!-- MAIN -->
       <main class="card">
-        <!-- Content unchanged, already well written -->
-        <!-- You can paste your existing section content here exactly as-is -->
+        <h2>Overview</h2>
+        <p>
+          FamSphere is designed to help families coordinate daily life with clarity, structure,
+          and trust. The app focuses on private, family-only workflows such as goals,
+          responsibilities, calendars, reminders, and family chat.
+        </p>
+
+        <p>
+          FamSphere is not a public social network and is not designed for discovery,
+          advertising, or communication outside your family group.
+        </p>
+
+        <div class="callout">
+          <div class="row">
+            <div class="icon">🔒</div>
+            <div>
+              <strong>Privacy-first by design</strong><br />
+              FamSphere is built to keep your family data private.
+              We do not sell personal data and do not run advertising or behavioral tracking.
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="icon">☁️</div>
+            <div>
+              <strong>Apple infrastructure</strong><br />
+              Data is stored using Apple iCloud and CloudKit services associated with your Apple ID.
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Data we collect</h2>
+        <ul>
+          <li><strong>Family profiles:</strong> display name, role (parent or child), and optional avatar or color.</li>
+          <li><strong>Goals and responsibilities:</strong> titles, milestones, points, status, approvals, and history.</li>
+          <li><strong>Calendar items:</strong> event titles, dates, times, notes, recurrence, and reminders.</li>
+          <li><strong>Family chat:</strong> messages, timestamps, and basic message flags.</li>
+          <li><strong>App preferences:</strong> settings that control app behavior on your device.</li>
+        </ul>
+
+        <div class="note">
+          FamSphere does not require a separate account.
+          Access and sharing are based on your Apple ID and iCloud configuration.
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Data we do not collect</h2>
+        <ul>
+          <li>No advertising identifiers</li>
+          <li>No sale of personal information</li>
+          <li>No public profiles or discovery</li>
+          <li>No cross-app or cross-site tracking</li>
+          <li>No background location tracking</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>How data is used</h2>
+        <div class="kpi">
+          <div class="tile">
+            <div class="label">Goals & responsibilities</div>
+            <div class="value">Track creation, approvals, points, and progress.</div>
+          </div>
+          <div class="tile">
+            <div class="label">Calendar & reminders</div>
+            <div class="value">Show schedules and trigger reminders you choose.</div>
+          </div>
+          <div class="tile">
+            <div class="label">Family communication</div>
+            <div class="value">Private, family-only chat.</div>
+          </div>
+          <div class="tile">
+            <div class="label">Role-based guardrails</div>
+            <div class="value">Parent and child permissions.</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Notifications</h2>
+        <p>
+          FamSphere may send optional notifications for chat messages, goal updates,
+          and calendar reminders such as <code>15 min</code>, <code>30 min</code>,
+          <code>1 hour</code>, or <code>1 day</code>.
+        </p>
+
+        <p>
+          Notifications can be managed or disabled at any time in iOS Settings.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Security</h2>
+        <p>
+          FamSphere relies on Apple’s iCloud and CloudKit security, including encryption
+          in transit and at rest. We do not bypass Apple security protections.
+        </p>
+
+        <div class="note">
+          We recommend enabling two-factor authentication on your Apple ID.
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>Children’s privacy</h2>
+        <p>
+          FamSphere is designed for families, including children, within private family groups.
+          Parents manage membership and permissions.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Data retention and deletion</h2>
+        <p>
+          Data is stored as long as your family uses the app or until it is deleted.
+          You can remove data from within the app or via iCloud settings.
+        </p>
+
+        <div class="divider"></div>
+
+        <h2>Third-party services</h2>
+        <ul>
+          <li>Apple iCloud and CloudKit</li>
+          <li>Apple Push Notification service</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>Contact</h2>
+        <p>
+          <strong>Email:</strong> vinay.viswam@gmail.com<br />
+          <strong>App:</strong> FamSphere
+        </p>
+
+        <p class="fineprint">Last updated: January 20, 2026</p>
       </main>
 
-      <!-- Side panel -->
+      <!-- ASIDE -->
       <aside class="card">
-        <!-- Same as your current aside -->
+        <h2>Privacy at a glance</h2>
+
+        <div class="callout">
+          <div class="row">
+            <div class="icon">👨‍👩‍👧</div>
+            <div><strong>Family-only access</strong><br />Invite-based membership.</div>
+          </div>
+          <div class="row">
+            <div class="icon">🧭</div>
+            <div><strong>Role-aware permissions</strong><br />Parents and children have distinct controls.</div>
+          </div>
+          <div class="row">
+            <div class="icon">🚫</div>
+            <div><strong>No ads or tracking</strong><br />No advertising or analytics networks.</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="badge"><span class="b1"></span> Parent</p>
+        <p class="badge"><span class="b2"></span> Child</p>
       </aside>
 
     </div>
